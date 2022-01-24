@@ -104,7 +104,7 @@ namespace GradeHW
             this.Controls.Add(this.LabPaperId);
             this.Controls.Add(this.BtnPaperId);
             this.Name = "FrmSkillTest";
-            this.Text = "FrmSkillTest";
+            this.Text = "/+-]7\\\'4>";
             this.ResumeLayout(false);
             this.PerformLayout();
 
