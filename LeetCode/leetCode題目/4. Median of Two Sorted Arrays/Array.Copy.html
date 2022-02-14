@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb reference reference has-default-focus theme-light" lang="zh-tw" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Array.Copy 方法 (System)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/zh-tw/dotnet/api/system.array.copy" />
+			<meta property="og:description" content="將某個 Array 中的項目範圍複製到另一個 Array，並在必要時執行類型轉型和 Boxing。Copies a range of elements in one Array to another Array and performs type casting and boxing as required. " />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="monikers" content="dotnet-uwp-10.0" />
+<meta name="monikers" content="net-5.0" />
+<meta name="monikers" content="net-6.0" />
+<meta name="monikers" content="netcore-1.0" />
+<meta name="monikers" content="netcore-1.1" />
+<meta name="monikers" content="netcore-2.0" />
+<meta name="monikers" content="netcore-2.1" />
+<meta name="monikers" content="netcore-2.2" />
+<meta name="monikers" content="netcore-3.0" />
+<meta name="monikers" content="netcore-3.1" />
+<meta name="monikers" content="netframework-1.1" />
+<meta name="monikers" content="netframework-2.0" />
+<meta name="monikers" content="netframework-3.0" />
+<meta name="monikers" content="netframework-3.5" />
+<meta name="monikers" content="netframework-4.0" />
+<meta name="monikers" content="netframework-4.5" />
+<meta name="monikers" content="netframework-4.5.1" />
+<meta name="monikers" content="netframework-4.5.2" />
+<meta name="monikers" content="netframework-4.6" />
+<meta name="monikers" content="netframework-4.6.1" />
+<meta name="monikers" content="netframework-4.6.2" />
+<meta name="monikers" content="netframework-4.7" />
+<meta name="monikers" content="netframework-4.7.1" />
+<meta name="monikers" content="netframework-4.7.2" />
+<meta name="monikers" content="netframework-4.8" />
+<meta name="monikers" content="netstandard-1.0" />
+<meta name="monikers" content="netstandard-1.1" />
+<meta name="monikers" content="netstandard-1.2" />
+<meta name="monikers" content="netstandard-1.3" />
+<meta name="monikers" content="netstandard-1.4" />
+<meta name="monikers" content="netstandard-1.5" />
+<meta name="monikers" content="netstandard-1.6" />
+<meta name="monikers" content="netstandard-2.0" />
+<meta name="monikers" content="netstandard-2.1" />
+<meta name="monikers" content="xamarinandroid-7.1" />
+<meta name="monikers" content="xamarinios-10.8" />
+<meta name="monikers" content="xamarinmac-3.0" />
+<meta name="namespace" content="System" />
+<meta name="APILocation" content="System.Runtime.dll" />
+<meta name="APILocation" content="mscorlib.dll" />
+<meta name="APILocation" content="netstandard.dll" />
+<meta name="APIName" content="System.Array.Copy" />
+<meta name="APIType" content="Assembly" />
+<meta name="apiPlatform" content="dotnet" />
+<meta name="author" content="dotnet-bot" />
+<meta name="bilingual_type" content="hover over" />
+<meta name="breadcrumb_path" content="/dotnet/breadcrumb/toc.json" />
+<meta name="depot_name" content="VS.dotnet-api-docs" />
+<meta name="document_id" content="a3c714d2-49a9-cf95-2b42-2430ca334e78" />
+<meta name="document_version_independent_id" content="f2d858d1-218a-e9e3-fd8c-88e58d0b9b01" />
+<meta name="enable_loc_sxs" content="true" />
+<meta name="gitcommit" content="https://github.com/dotnet/dotnet-api-docs.zh-tw/blob/62820f615495e849b727f5db2d89496454c50801/xml/System/Array.xml" />
+<meta name="locale" content="zh-tw" />
+<meta name="ms.author" content="dotnetcontent" />
+<meta name="ms.contentlocale" content="zh-TW" />
+<meta name="ms.date" content="04/30/2018" />
+<meta name="ms.lasthandoff" content="03/24/2021" />
+<meta name="ms.locfileid" content="105017381" />
+<meta name="ms.openlocfilehash" content="cb45c4f715ac3140647e0b28e59ca963df159996" />
+<meta name="ms.prod" content="dotnet-api" />
+<meta name="ms.sourcegitcommit" content="b8fad6886a022c0f63845caee1a12b7bb81a6c65" />
+<meta name="ms.technology" content="system" />
+<meta name="ms.topic" content="managed-reference" />
+<meta name="ms.translationtype" content="MT" />
+<meta name="original_content_git_url" content="https://github.com/dotnet/dotnet-api-docs.zh-tw/blob/live-sxs/xml/System/Array.xml" />
+<meta name="search.ms_docsetname" content="dotnet-api-docs" />
+<meta name="search.ms_product" content="VS" />
+<meta name="search.ms_sitename" content="Docs" />
+<meta name="site_name" content="Docs" />
+<meta name="TopicType" content="apiref" />
+<meta name="uhfHeaderId" content="MSDocsHeader-DotNet" />
+<meta name="updated_at" content="2021-03-24 07:45 PM" />
+<meta name="page_type" content="dotnet" />
+<meta name="page_kind" content="method" />
+<meta name="ms.assetid" content="System.Array.Copy*" />
+<meta name="description" content="將某個 Array 中的項目範圍複製到另一個 Array，並在必要時執行類型轉型和 Boxing。Copies a range of elements in one Array to another Array and performs type casting and boxing as required. " />
+<meta name="toc_rel" content="_splitted/system/toc.json" />
+<meta name="search.mshattr.devlang" content="csharp vb fsharp cpp" />
+
+
+	<meta name="scope" content=".NET" />
+<link href="https://docs.microsoft.com/zh-tw/dotnet/api/system.array.copy" rel="canonical">
+	<title>Array.Copy 方法 (System) | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/zh-tw/_themes/styles/9150d724.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'zh-tw',
+			contentDir: 'ltr',
+			userLocale: 'zh-tw',
+			userDir: 'ltr',
+			pageTemplate: 'Reference',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/dotnet/dotnet-api-docs.zh-tw/blob/live/xml/System/Array.xml',
+			defaultDevLang: 'csharp',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "olprod", url: "https://github.com/olprod" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/zh-tw/_themes/global/5cce29c0.deprecation.js"></script>
+		<script src="/static/third-party/qrious/4.0.2-r1/qrious.min.js" integrity="sha384-h/SmU/qxwYnRlzklg9PKWpDwyma9UmKuOB//Pz6Cov5KkEqcaFF0vod43/XhoeyJ" crossorigin="anonymous"></script>
+		<script src="/_themes/docs.theme/master/zh-tw/_themes/scripts/f39d37c6.index-docs.js"></script>
+</head>
+
+<body lang="zh-tw" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">跳到主要內容</a>
+
+		<div hidden id="cookie-consent-holder"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">已不再支援此瀏覽器。</p>
+				<p style="font-size: 16px; margin-top: 16px;">請升級至 Microsoft Edge，以利用最新功能、安全性更新和技術支援。</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+下載 Microsoft Edge					</a>
+					<a href="https://docs.microsoft.com/en-US/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+其他資訊					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar border-top is-hidden-mobile"></div>
+</header>		</div>
+
+						<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+					<nav id="breadcrumbs-deprecated-container" class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop flex-grow-1" data-bi-name="breadcrumb" role="navigation" aria-label="階層連結">
+						<ul id="page-breadcrumbs-deprecated" class="breadcrumbs-deprecated">
+						</ul>
+					</nav>
+					<div class="content-header-controls">
+						<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+							<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+							<span class="contents-expand-title">目錄</span>
+						</button>
+						<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+							<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+							<span>結束焦點模式</span>
+						</button>
+					</div>
+					<div id="page-actions-deprecated-container" class="has-padding-none-tablet padding-xs font-size-sm display-flex justify-content-space-between flex-grow-1 page-action-holder">
+						<ul class="is-hidden-mobile action-list justify-content-flex-start justify-content-flex-end-tablet display-flex flex-wrap-wrap flex-grow-1 is-unstyled">
+							<li>
+<div class="language dropdown has-caret display-inline-block border border-none-tablet">
+	<button class="dropdown-trigger button button-clear button-sm" aria-controls="language-menu" aria-expanded="false" title="語言" data-bi-name="language">
+		<span class="icon is-hidden-desktop margin-none">
+			<span class="docon docon-code-lang" aria-hidden="true"></span>
+		</span>
+		<span class="lang-title is-visually-hidden-touch align-self-flex-start is-hidden-portrait" dir="ltr">語言</span>
+		<span class="icon is-hidden-mobile is-hidden-tablet-only" aria-hidden="true">
+			<span class="docon docon-chevron-down-light expanded-indicator"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu has-padding-small language-selector" name="language-selector" role="menu">
+		<ul data-bi-name="language-links" dir="ltr">
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-csharp" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-vb" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-fsharp" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-cpp" tabindex="0" aria-selected="false"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+							</li>
+							<li>
+								<a id="lang-link-deprecated" class="button button button-clear button-sm" title="閱讀英文" data-bi-name="language-toggle" data-read-in-link data-hidden-parent>
+									<span class="icon docon docon-locale-globe" aria-hidden="true" data-read-in-link-icon></span>
+									<span class="is-visually-hidden-touch is-hidden-portrait" data-read-in-link-text>閱讀英文</span>
+								</a>
+							</li>
+							<li>
+								<button type="button" class="collection button button-clear button-sm has-inner-focus" data-list-type="collection" data-bi-name="collection" title="新增到集合">
+									<span class="icon" aria-hidden="true">
+										<span class="docon docon-circle-addition has-text-primary"></span>
+									</span>
+									<span class="collection-status is-visually-hidden-touch is-hidden-portrait">儲存</span>
+								</button>
+							</li>
+									<li id="contenteditbtn" hidden>
+										<a href="https://github.com/dotnet/dotnet-api-docs.zh-tw/blob/live/xml/System/Array.xml" class=" button button-clear button-sm has-inner-focus" title="編輯此文件" data-bi-name="edit" data-original_content_git_url="https://github.com/dotnet/dotnet-api-docs.zh-tw/blob/live-sxs/xml/System/Array.xml" data-original_content_git_url_template="{repo}/blob/{branch}/xml/System/Array.xml" data-pr_repo="" data-pr_branch="">
+										<span class="icon" aria-hidden="true">
+											<span class="docon docon-edit-outline"></span>
+										</span>
+										<span class="is-visually-hidden-touch is-hidden-portrait">編輯</span>
+									</a>
+								</li>
+							<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button button-clear button-sm button-block justify-content-flex-start has-inner-focus" aria-controls="sharing-menu" aria-expanded="false" title="分享此文件" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">共用</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-twitter" data-bi-name="twitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-linkedin" data-bi-name="linkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-facebook" data-bi-name="facebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-email" data-bi-name="email">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>電子郵件</span>
+				</a>
+			</li>
+			<li>
+				<span class="button button-clear button-sm button-block justify-content-flex-start has-inner-focus share-wechat has-padding-top-extra-small has-padding-left-medium has-padding-right-medium">
+					<span class="icon">
+						<span class="docon docon-wechat has-text-primary" data-bi-name="wechat" aria-hidden="true"></span>
+					</span>
+					<span>WeChat</span>
+				</span>
+			</li>
+			<li>
+				<canvas class="qr-code"></canvas>
+			</li>
+		</ul>
+	</div>
+</div>							</li>
+						</ul>
+						<button id="page-actions-toc-button-deprecated" type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" aria-label="目錄" data-bi-name="contents-expand" data-contents-button>
+							<span class="icon">
+								<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+							</span>
+							<span class="contents-expand-title">目錄</span>
+						</button>
+						<div class="is-invisible"></div>
+						<div class="is-hidden-tablet level-item is-flexible level-right">
+<div class="language dropdown has-caret display-inline-block border border-none-tablet">
+	<button class="dropdown-trigger button button-clear button-sm" aria-controls="language-menu" aria-expanded="false" title="語言" data-bi-name="language">
+		<span class="icon is-hidden-desktop margin-none">
+			<span class="docon docon-code-lang" aria-hidden="true"></span>
+		</span>
+		<span class="lang-title is-visually-hidden-touch align-self-flex-start is-hidden-portrait" dir="ltr">語言</span>
+		<span class="icon is-hidden-mobile is-hidden-tablet-only" aria-hidden="true">
+			<span class="docon docon-chevron-down-light expanded-indicator"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu has-padding-small language-selector" name="language-selector" role="menu">
+		<ul data-bi-name="language-links" dir="ltr">
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-csharp" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-vb" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-fsharp" tabindex="0" aria-selected="false"></a>
+			</li>
+			<li>
+				<a class="button button-clear button-sm button-block" data-bi-name="lang-cpp" tabindex="0" aria-selected="false"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+							<button type="button" class="page-actions-button  button button-clear button-sm is-hidden-tablet has-inner-focus border is-full-height  margin-left-xxs" aria-label="頁面動作" data-bi-name="pageactions">
+								<span class="icon">
+									<span class="docon docon-more-vertical" aria-hidden="true"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+			</div>
+
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="position-fixed display-flex flex-direction-column" role="navigation" aria-label="主要"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" role="main" data-bi-name="content" lang="zh-tw" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-xs-tablet margin-bottom-xs" aria-label="content-header" hidden>
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+									<bread-crumbs id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop" id="page-breadcrumbs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+											<div class="language dropdown display-flex align-items-center">
+												<button class="dropdown-trigger button button-clear button-sm button-primary" aria-controls="language-menu" aria-expanded="false" title="語言" data-bi-name="language">
+													<span class="lang-title align-self-flex-start" dir="ltr">語言</span>
+													<span class="icon" aria-hidden="true">
+														<span class="docon docon-chevron-down-light expanded-indicator"></span>
+													</span>
+												</button>
+												<div class="dropdown-menu has-padding-small language-selector" name="language-selector" role="menu">
+													<ul data-bi-name="language-links" dir="ltr">
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-csharp" tabindex="0" aria-selected="false"></a>
+														</li>
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-vb" tabindex="0" aria-selected="false"></a>
+														</li>
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-fsharp" tabindex="0" aria-selected="false"></a>
+														</li>
+														<li>
+															<a class="button button-clear button-sm button-block" data-bi-name="lang-cpp" tabindex="0" aria-selected="false"></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="閱讀英文" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>閱讀英文</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="新增到集合">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">儲存</span>
+											</button>
+										
+
+										
+
+										
+
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="更多動作">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														aria-label="目錄"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+														<span class="contents-expand-title">目錄</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="閱讀英文" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>閱讀英文</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="新增到集合"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">儲存</span>
+													</button>
+
+
+
+
+													<div aria-hidden="true" class="margin-none display-none-tablet border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>電子郵件</span>
+														</a>
+															<span class="button button-clear button-sm has-inner-focus button-block justify-content-flex-start share-wechat">
+																<span class="icon" aria-hidden="true">
+																	<span class="docon docon-wechat" data-bi-name="wechat" data-page-action-item="overflow-all"></span>
+																</span>
+																<span>WeChat</span>
+															</span>
+															<canvas class="qr-code"></canvas>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div class="">
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" aria-label="目錄" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+									<span class="contents-expand-title">目錄</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								
+
+
+
+
+
+								<!-- <content> -->
+									
+<h1>Array.<wbr>Copy 方法</h1>
+
+<h2 class="hiddenAnchor" id="definition">定義</h2>
+
+<div class="metadata">
+		<dl class="attributeList">
+			<dt>命名空間:</dt>
+			<dd>
+				<span class="break-text">   <a class="xref" href="system?view=net-6.0" data-linktype="relative-path">System</a> </span>
+			</dd>
+		</dl>
+
+
+		<dl class="attributeList" data-moniker=" net-5.0 ">
+			<dt>組件:</dt><dd>mscorlib.dll, System.Runtime.dll</dd>
+		</dl>
+		<dl class="attributeList" data-moniker=" net-6.0 ">
+			<dt>組件:</dt><dd>mscorlib.dll, netstandard.dll</dd>
+		</dl>
+		<dl class="attributeList" data-moniker=" netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 dotnet-uwp-10.0 netcore-1.0 netcore-1.1 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 ">
+			<dt>組件:</dt><dd>System.Runtime.dll</dd>
+		</dl>
+		<dl class="attributeList" data-moniker=" netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+			<dt>組件:</dt><dd>mscorlib.dll</dd>
+		</dl>
+		<dl class="attributeList" data-moniker=" netstandard-2.0 netstandard-2.1 ">
+			<dt>組件:</dt><dd>netstandard.dll</dd>
+		</dl>
+
+
+</div>
+	<div class="summaryHolder">
+		<div class="summary clearFix">
+			<p><span data-ttu-id="4008e-537">將某個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 中的項目範圍複製到另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>，並在必要時執行類型轉型和 Boxing。</span><span class="sxs-lookup"><span data-stu-id="4008e-537">Copies a range of elements in one <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> to another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> and performs type casting and boxing as required.</span></span></p>
+
+		</div>
+	</div>
+
+<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+  <h3>本文內容</h3>
+</nav>
+    <h2>多載</h2>
+
+    <table class="nameValue stack">
+		    <tr data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+        			<td>
+						  <a class="xref" href="system.array.copy?view=net-6.0#System_Array_Copy_System_Array_System_Int64_System_Array_System_Int64_System_Int64_" data-linktype="relative-path">Copy(Array, Int64, Array, Int64, Int64)</a>
+					</td>
+					<td>
+						  <p><span data-ttu-id="4008e-694">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從指定的來源索引開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從指定的目的索引開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-694">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified source index and pastes them to another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified destination index.</span></span> <span data-ttu-id="4008e-695">長度與索引都指定為 64 位元的整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-695">The length and the indexes are specified as 64-bit integers.</span></span></p>
+
+					</td>
+        	</tr>
+		    <tr data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+        			<td>
+						  <a class="xref" href="system.array.copy?view=net-6.0#System_Array_Copy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_" data-linktype="relative-path">Copy(Array, Int32, Array, Int32, Int32)</a>
+					</td>
+					<td>
+						  <p><span data-ttu-id="4008e-639">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從指定的來源索引開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從指定的目的索引開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-639">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified source index and pastes them to another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified destination index.</span></span> <span data-ttu-id="4008e-640">長度與索引都指定為 32 位元的整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-640">The length and the indexes are specified as 32-bit integers.</span></span></p>
+
+					</td>
+        	</tr>
+		    <tr data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+        			<td>
+						  <a class="xref" href="system.array.copy?view=net-6.0#System_Array_Copy_System_Array_System_Array_System_Int64_" data-linktype="relative-path">Copy(Array, Array, Int64)</a>
+					</td>
+					<td>
+						  <p><span data-ttu-id="4008e-590">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從第一個項目開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從第一個項目開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-590">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element and pastes them into another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element.</span></span> <span data-ttu-id="4008e-591">長度是以 64 位元整數方式指定。</span><span class="sxs-lookup"><span data-stu-id="4008e-591">The length is specified as a 64-bit integer.</span></span></p>
+
+					</td>
+        	</tr>
+		    <tr data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+        			<td>
+						  <a class="xref" href="system.array.copy?view=net-6.0#System_Array_Copy_System_Array_System_Array_System_Int32_" data-linktype="relative-path">Copy(Array, Array, Int32)</a>
+					</td>
+					<td>
+						  <p><span data-ttu-id="4008e-542">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從第一個項目開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從第一個項目開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-542">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element and pastes them into another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element.</span></span> <span data-ttu-id="4008e-543">長度已指定為 32 位元整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-543">The length is specified as a 32-bit integer.</span></span></p>
+
+					</td>
+        	</tr>
+    </table>
+
+	<h2 id="examples">範例</h2>
+	<p><span data-ttu-id="4008e-538">下列程式碼範例示範如何從 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 類型的其中一個複製 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 到 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 整數類型的另一個。</span><span class="sxs-lookup"><span data-stu-id="4008e-538">The following code example shows how to copy from one <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> of type <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> to another <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> of type integer.</span></span></p>
+<pre>
+<code class="lang-cpp">using namespace System;
+void PrintValues( Array^ myArr );
+void main()
+{
+   
+   // Creates and initializes a new Array instance of type Int32.
+   Array^ myIntArray = Array::CreateInstance( Type::GetType(  &quot;System.Int32&quot; ), 5 );
+   for ( int i = myIntArray-&gt;GetLowerBound( 0 ); i &lt;= myIntArray-&gt;GetUpperBound( 0 ); i++ )
+      myIntArray-&gt;SetValue( i + 1, i );
+   
+   // Creates and initializes a new Array instance of type Object.
+   Array^ myObjArray = Array::CreateInstance( Type::GetType(  &quot;System.Object&quot; ), 5 );
+   for ( int i = myObjArray-&gt;GetLowerBound( 0 ); i &lt;= myObjArray-&gt;GetUpperBound( 0 ); i++ )
+      myObjArray-&gt;SetValue( i + 26, i );
+   
+   // Displays the initial values of both arrays.
+   Console::WriteLine(  &quot;Int32 array:&quot; );
+   PrintValues( myIntArray );
+   Console::WriteLine(  &quot;Object array:&quot; );
+   PrintValues( myObjArray );
+   
+   // Copies the first element from the Int32 array to the Object array.
+   Array::Copy( myIntArray, myIntArray-&gt;GetLowerBound( 0 ), myObjArray, myObjArray-&gt;GetLowerBound( 0 ), 1 );
+   
+   // Copies the last two elements from the Object array to the Int32 array.
+   Array::Copy( myObjArray, myObjArray-&gt;GetUpperBound( 0 ) - 1, myIntArray, myIntArray-&gt;GetUpperBound( 0 ) - 1, 2 );
+   
+   // Displays the values of the modified arrays.
+   Console::WriteLine(  &quot;Int32 array - Last two elements should now be the same as Object array:&quot; );
+   PrintValues( myIntArray );
+   Console::WriteLine(  &quot;Object array - First element should now be the same as Int32 array:&quot; );
+   PrintValues( myObjArray );
+}
+
+void PrintValues( Array^ myArr )
+{
+   System::Collections::IEnumerator^ myEnumerator = myArr-&gt;GetEnumerator();
+   int i = 0;
+   int cols = myArr-&gt;GetLength( myArr-&gt;Rank - 1 );
+   while ( myEnumerator-&gt;MoveNext() )
+   {
+      if ( i &lt; cols )
+      {
+         i++;
+      }
+      else
+      {
+         Console::WriteLine();
+         i = 1;
+      }
+
+      Console::Write(  &quot;\t{0}&quot;, myEnumerator-&gt;Current );
+   }
+
+   Console::WriteLine();
+}
+
+/*
+ This code produces the following output.
+ 
+ Int32 array:
+     1    2    3    4    5
+ Object array:
+     26    27    28    29    30
+ Int32 array - Last two elements should now be the same as Object array:
+     1    2    3    29    30
+ Object array - First element should now be the same as Int32 array:
+     1    27    28    29    30
+ */
+</code></pre>
+<pre>
+<code class="lang-csharp" data-interactive="csharp" data-interactive-mode="try-dotnet">using System;
+public class SamplesArray  {
+
+   public static void Main()  {
+
+      // Creates and initializes a new Array of type Int32.
+      Array myIntArray=Array.CreateInstance( typeof(System.Int32), 5 );
+      for ( int i = myIntArray.GetLowerBound(0); i &lt;= myIntArray.GetUpperBound(0); i++ )
+         myIntArray.SetValue( i+1, i );
+
+      // Creates and initializes a new Array of type Object.
+      Array myObjArray = Array.CreateInstance( typeof(System.Object), 5 );
+      for ( int i = myObjArray.GetLowerBound(0); i &lt;= myObjArray.GetUpperBound(0); i++ )
+         myObjArray.SetValue( i+26, i );
+
+      // Displays the initial values of both arrays.
+      Console.WriteLine( &quot;Int32 array:&quot; );
+      PrintValues( myIntArray );
+      Console.WriteLine( &quot;Object array:&quot; );
+      PrintValues( myObjArray );
+
+      // Copies the first element from the Int32 array to the Object array.
+      Array.Copy( myIntArray, myIntArray.GetLowerBound(0), myObjArray, myObjArray.GetLowerBound(0), 1 );
+
+      // Copies the last two elements from the Object array to the Int32 array.
+      Array.Copy( myObjArray, myObjArray.GetUpperBound(0) - 1, myIntArray, myIntArray.GetUpperBound(0) - 1, 2 );
+
+      // Displays the values of the modified arrays.
+      Console.WriteLine( &quot;Int32 array - Last two elements should now be the same as Object array:&quot; );
+      PrintValues( myIntArray );
+      Console.WriteLine( &quot;Object array - First element should now be the same as Int32 array:&quot; );
+      PrintValues( myObjArray );
+   }
+
+   public static void PrintValues( Array myArr )  {
+      System.Collections.IEnumerator myEnumerator = myArr.GetEnumerator();
+      int i = 0;
+      int cols = myArr.GetLength( myArr.Rank - 1 );
+      while ( myEnumerator.MoveNext() )  {
+         if ( i &lt; cols )  {
+            i++;
+         } else  {
+            Console.WriteLine();
+            i = 1;
+         }
+         Console.Write( &quot;\t{0}&quot;, myEnumerator.Current );
+      }
+      Console.WriteLine();
+   }
+}
+/*
+This code produces the following output.
+
+Int32 array:
+    1    2    3    4    5
+Object array:
+    26    27    28    29    30
+Int32 array - Last two elements should now be the same as Object array:
+    1    2    3    29    30
+Object array - First element should now be the same as Int32 array:
+    1    27    28    29    30
+*/
+</code></pre>
+<pre>
+<code class="lang-vb">Public Class SamplesArray    
+    
+    Public Shared Sub Main()
+        
+        &#39; Creates and initializes a new Array of type Int32.
+        Dim myIntArray As Array = _
+           Array.CreateInstance(GetType(System.Int32), 5)
+        Dim i As Integer
+        For i = myIntArray.GetLowerBound(0) To myIntArray.GetUpperBound(0)
+            myIntArray.SetValue(i + 1, i)
+        Next i 
+        &#39; Creates and initializes a new Array of type Object.
+        Dim myObjArray As Array = _
+           Array.CreateInstance(GetType(System.Object), 5)
+        For i = myObjArray.GetLowerBound(0) To myObjArray.GetUpperBound(0)
+            myObjArray.SetValue(i + 26, i)
+        Next i 
+        &#39; Displays the initial values of both arrays.
+        Console.WriteLine(&quot;Int32 array:&quot;)
+        PrintValues(myIntArray)
+        Console.WriteLine(&quot;Object array:&quot;)
+        PrintValues(myObjArray)
+        
+        &#39; Copies the first element from the Int32 array to the Object array.
+        Array.Copy(myIntArray, myIntArray.GetLowerBound(0), myObjArray, _
+           myObjArray.GetLowerBound(0), 1)
+        
+        &#39; Copies the last two elements from the Object array to the Int32 array.
+        Array.Copy(myObjArray, myObjArray.GetUpperBound(0) - 1, myIntArray, _
+           myIntArray.GetUpperBound(0) - 1, 2)
+        
+        &#39; Displays the values of the modified arrays.
+        Console.WriteLine(&quot;Int32 array - Last two elements should now be &quot; _
+           + &quot;the same as Object array:&quot;)
+        PrintValues(myIntArray)
+        Console.WriteLine(&quot;Object array - First element should now be the &quot; _
+           + &quot;same as Int32 array:&quot;)
+        PrintValues(myObjArray)
+    End Sub
+    
+    Public Shared Sub PrintValues(myArr As Array)
+        Dim myEnumerator As System.Collections.IEnumerator = _
+           myArr.GetEnumerator()
+        Dim i As Integer = 0
+        Dim cols As Integer = myArr.GetLength((myArr.Rank - 1))
+        While myEnumerator.MoveNext()
+            If i &lt; cols Then
+                i += 1
+            Else
+                Console.WriteLine()
+                i = 1
+            End If
+            Console.Write(ControlChars.Tab + &quot;{0}&quot;, myEnumerator.Current)
+        End While
+        Console.WriteLine()
+    End Sub
+End Class
+
+&#39; This code produces the following output.
+&#39; 
+&#39; Int32 array:
+&#39;     1    2    3    4    5
+&#39; Object array:
+&#39;     26    27    28    29    30
+&#39; Int32 array - Last two elements should now be the same as Object array:
+&#39;     1    2    3    29    30
+&#39; Object array - First element should now be the same as Int32 array:
+&#39;     1    27    28    29    30
+</code></pre>
+
+
+    
+<div data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+
+<div class="memberNameHolder">
+	<h2 id="System_Array_Copy_System_Array_System_Int64_System_Array_System_Int64_System_Int64_">
+	    Copy(Array, Int64, Array, Int64, Int64)
+	</h2>
+</div>
+
+<div class="memberInfo">
+
+	<div class="summaryHolder">
+		<div class="summary clearFix">
+			<p><span data-ttu-id="4008e-694">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從指定的來源索引開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從指定的目的索引開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-694">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified source index and pastes them to another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified destination index.</span></span> <span data-ttu-id="4008e-695">長度與索引都指定為 64 位元的整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-695">The length and the indexes are specified as 64-bit integers.</span></span></p>
+
+		</div>
+	</div>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="cpp lang-cpp" dir="ltr">public:
+ static void Copy(Array ^ sourceArray, long sourceIndex, Array ^ destinationArray, long destinationIndex, long length);</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="csharp lang-csharp" dir="ltr">public static void Copy (Array sourceArray, long sourceIndex, Array destinationArray, long destinationIndex, long length);</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="fsharp lang-fsharp" dir="ltr">static member Copy : Array * int64 * Array * int64 * int64 -&gt; unit</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="vb lang-vb" dir="ltr">Public Shared Sub Copy (sourceArray As Array, sourceIndex As Long, destinationArray As Array, destinationIndex As Long, length As Long)</code></pre>
+	<h4 class="propertyInfoTitle stack">參數</h4>
+	<div class="propertyInfo">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-688">包含要複製資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-688">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that contains the data to copy.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceIndex</span>
+			</dt>
+			<dd>
+				<a href='system.int64?view=net-6.0' data-linktype="relative-path">Int64</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-689">64 位元的整數，代表 <code data-dev-comment-type="paramref">sourceArray</code> 中的索引，由此開始複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-689">A 64-bit integer that represents the index in the <code data-dev-comment-type="paramref">sourceArray</code> at which copying begins.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-690">接收資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-690">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that receives the data.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationIndex</span>
+			</dt>
+			<dd>
+				<a href='system.int64?view=net-6.0' data-linktype="relative-path">Int64</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-691">64 位元的整數，代表 <code data-dev-comment-type="paramref">destinationArray</code> 中的索引，由此開始儲存。</span><span class="sxs-lookup"><span data-stu-id="4008e-691">A 64-bit integer that represents the index in the <code data-dev-comment-type="paramref">destinationArray</code> at which storing begins.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">length</span>
+			</dt>
+			<dd>
+				<a href='system.int64?view=net-6.0' data-linktype="relative-path">Int64</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-692">64 位元整數，表示要複製的項目數目。</span><span class="sxs-lookup"><span data-stu-id="4008e-692">A 64-bit integer that represents the number of elements to copy.</span></span> <span data-ttu-id="4008e-693">這個整數必須在零和 <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a> 之間 (包含頭尾)。</span><span class="sxs-lookup"><span data-stu-id="4008e-693">The integer must be between zero and <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>, inclusive.</span></span></p>
+
+	</div>
+
+
+	<h4 class="propertyInfoTitle stack">例外狀況</h4>
+		<div class="propertyInfo">
+		    <div class="subtle">
+			    <a href='system.argumentnullexception?view=net-6.0' data-linktype="relative-path">ArgumentNullException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-729"><code data-dev-comment-type="paramref">sourceArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-729"><code data-dev-comment-type="paramref">sourceArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+<p><span data-ttu-id="4008e-730">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-730">-or-</span></span></p>
+<p><span data-ttu-id="4008e-731"><code data-dev-comment-type="paramref">destinationArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-731"><code data-dev-comment-type="paramref">destinationArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.rankexception?view=net-6.0' data-linktype="relative-path">RankException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-732"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 的順位不同。</span><span class="sxs-lookup"><span data-stu-id="4008e-732"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> have different ranks.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.arraytypemismatchexception?view=net-6.0' data-linktype="relative-path">ArrayTypeMismatchException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-733"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-733"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> are of incompatible types.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.invalidcastexception?view=net-6.0' data-linktype="relative-path">InvalidCastException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-734"><code data-dev-comment-type="paramref">sourceArray</code> 至少有一個項目無法轉換成 <code data-dev-comment-type="paramref">destinationArray</code> 的類型。</span><span class="sxs-lookup"><span data-stu-id="4008e-734">At least one element in <code data-dev-comment-type="paramref">sourceArray</code> cannot be cast to the type of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentoutofrangeexception?view=net-6.0' data-linktype="relative-path">ArgumentOutOfRangeException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-735"><code data-dev-comment-type="paramref">sourceIndex</code> 超出 <code data-dev-comment-type="paramref">sourceArray</code> 的有效索引範圍。</span><span class="sxs-lookup"><span data-stu-id="4008e-735"><code data-dev-comment-type="paramref">sourceIndex</code> is outside the range of valid indexes for the <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-736">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-736">-or-</span></span></p>
+<p><span data-ttu-id="4008e-737"><code data-dev-comment-type="paramref">destinationIndex</code> 超出 <code data-dev-comment-type="paramref">destinationArray</code> 的有效索引範圍。</span><span class="sxs-lookup"><span data-stu-id="4008e-737"><code data-dev-comment-type="paramref">destinationIndex</code> is outside the range of valid indexes for the <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-738">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-738">-or-</span></span></p>
+<p><span data-ttu-id="4008e-739"><code data-dev-comment-type="paramref">length</code> 小於 0 或大於 <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-739"><code data-dev-comment-type="paramref">length</code> is less than 0 or greater than <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentexception?view=net-6.0' data-linktype="relative-path">ArgumentException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-740"><code data-dev-comment-type="paramref">length</code> 大於從 <code data-dev-comment-type="paramref">sourceIndex</code> 到 <code data-dev-comment-type="paramref">sourceArray</code> 結尾的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-740"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements from <code data-dev-comment-type="paramref">sourceIndex</code> to the end of <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-741">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-741">-or-</span></span></p>
+<p><span data-ttu-id="4008e-742"><code data-dev-comment-type="paramref">length</code> 大於從 <code data-dev-comment-type="paramref">destinationIndex</code> 到 <code data-dev-comment-type="paramref">destinationArray</code> 結尾的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-742"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements from <code data-dev-comment-type="paramref">destinationIndex</code> to the end of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+  
+
+    	<h3>備註</h3>		
+    	<p><span data-ttu-id="4008e-696"><code>sourceArray</code>和 <code>destinationArray</code> 參數的維度數目必須相同。</span><span class="sxs-lookup"><span data-stu-id="4008e-696">The <code>sourceArray</code> and <code>destinationArray</code> parameters must have the same number of dimensions.</span></span> <span data-ttu-id="4008e-697">此外， <code>destinationArray</code> 必須已經過維度，而且必須有足夠數目的元素從位置開始， <code>destinationIndex</code> 以容納複製的資料。</span><span class="sxs-lookup"><span data-stu-id="4008e-697">In addition, <code>destinationArray</code> must already have been dimensioned and must have a sufficient number of elements starting from the <code>destinationIndex</code> position to accommodate the copied data.</span></span></p>
+<p><span data-ttu-id="4008e-698">在多維度陣列之間進行複製時，陣列的行為就像是一維一維陣列，其中 (或資料行) 的資料列在概念上是端對端的配置。</span><span class="sxs-lookup"><span data-stu-id="4008e-698">When copying between multidimensional arrays, the array behaves like a long one-dimensional array, where the rows (or columns) are conceptually laid end-to-end.</span></span> <span data-ttu-id="4008e-699">例如，如果陣列有三個數據列 (或每個資料行) 有四個元素，則從陣列的開頭複製六個元素，就會將第一個資料列的四個元素複製 (或資料行) ，而第二個數據列的前兩個元素 (或資料行) 。</span><span class="sxs-lookup"><span data-stu-id="4008e-699">For example, if an array has three rows (or columns) with four elements each, copying six elements from the beginning of the array would copy all four elements of the first row (or column) and the first two elements of the second row (or column).</span></span> <span data-ttu-id="4008e-700">若要開始從第三個數據列的第二個元素複製 (或資料行) ， <code>sourceIndex</code> 必須是第一個資料列的上限 (或資料行) 加上第二個數據列 (或資料行的長度) 加上二。</span><span class="sxs-lookup"><span data-stu-id="4008e-700">To start copying from the second element of the third row (or column), <code>sourceIndex</code> must be the upper bound of the first row (or column) plus the length of the second row (or column) plus two.</span></span></p>
+<p><span data-ttu-id="4008e-701">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 重迭，這個方法的行為就像是在 <code>sourceArray</code> 覆寫之前，保留在暫存位置中的原始值一樣 <code>destinationArray</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-701">If <code>sourceArray</code> and <code>destinationArray</code> overlap, this method behaves as if the original values of <code>sourceArray</code> were preserved in a temporary location before <code>destinationArray</code> is overwritten.</span></span></p>
+<p><span data-ttu-id="4008e-702">[C++]</span><span class="sxs-lookup"><span data-stu-id="4008e-702">[C++]</span></span></p>
+<p><span data-ttu-id="4008e-703">這個方法相當於標準 C/c + + 函式 <code>memmove</code> ，而不是 <code>memcpy</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-703">This method is equivalent to the standard C/C++ function <code>memmove</code>, not <code>memcpy</code>.</span></span></p>
+<p><span data-ttu-id="4008e-704">陣列可以是參考型別陣列或實數值型別的陣列。</span><span class="sxs-lookup"><span data-stu-id="4008e-704">The arrays can be reference-type arrays or value-type arrays.</span></span> <span data-ttu-id="4008e-705">視需要執行型別向下檢視。</span><span class="sxs-lookup"><span data-stu-id="4008e-705">Type downcasting is performed, as required.</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-706">從參考型別陣列複製到實數值型別陣列時，每個專案都會取消裝箱然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-706">When copying from a reference-type array to a value-type array, each element is unboxed and then copied.</span></span> <span data-ttu-id="4008e-707">從實數值型別陣列複製到參考型別陣列時，會將每個元素全部裝箱，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-707">When copying from a value-type array to a reference-type array, each element is boxed and then copied.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-708">從參考型別或實數值型別陣列複製到 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列時， <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 會建立以保存每個值或參考，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-708">When copying from a reference-type or value-type array to an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array, an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> is created to hold each value or reference and then copied.</span></span> <span data-ttu-id="4008e-709">從 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列複製到參考型別或實數值型別陣列，且無法進行指派時，會擲回 <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-709">When copying from an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array to a reference-type or value-type array and the assignment is not possible, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-710">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 都是型別陣列，或都是類型的陣列 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> ，則會執行淺層複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-710">If <code>sourceArray</code> and <code>destinationArray</code> are both reference-type arrays or are both arrays of type <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a>, a shallow copy is performed.</span></span> <span data-ttu-id="4008e-711">的淺層複本 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 是新的， <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 其中包含與原始相同之專案的參考 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-711">A shallow copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> is a new <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> containing references to the same elements as the original <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a>.</span></span> <span data-ttu-id="4008e-712">元素本身或專案所參考的任何專案都不會複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-712">The elements themselves or anything referenced by the elements are not copied.</span></span> <span data-ttu-id="4008e-713">相反地，的深層複製會 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 複製元素，以及專案直接或間接參考的所有專案。</span><span class="sxs-lookup"><span data-stu-id="4008e-713">In contrast, a deep copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> copies the elements and everything directly or indirectly referenced by the elements.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-714"><a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a>如果陣列的類型不相容，則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-714">An <a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a> is thrown if the arrays are of incompatible types.</span></span> <span data-ttu-id="4008e-715">類型相容性的定義如下：</span><span class="sxs-lookup"><span data-stu-id="4008e-715">Type compatibility is defined as follows:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-716">類型與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-716">A type is compatible with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-717">實值型別與 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 和具有實值型別的介面型別相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-717">A value type is compatible with <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> and with an interface type implemented by that value type.</span></span> <span data-ttu-id="4008e-718">只有當實數值型別直接實作為介面時，才會將其視為連接到介面。</span><span class="sxs-lookup"><span data-stu-id="4008e-718">A value type is considered connected to an interface only if it implements that interface directly.</span></span> <span data-ttu-id="4008e-719">中斷連線的類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-719">Disconnected types are not compatible.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-720">如果從來源類型複製到目的類型是擴輾轉換，則兩個內建 (預先定義的) 實數值型別都是相容的。</span><span class="sxs-lookup"><span data-stu-id="4008e-720">Two intrinsic (predefined) value types are compatible if copying from the source type to the destination type is a widening conversion.</span></span> <span data-ttu-id="4008e-721">擴輾轉換永遠不會遺失資訊，而縮小轉換可能會遺失資訊。</span><span class="sxs-lookup"><span data-stu-id="4008e-721">A widening conversion never loses information, whereas a narrowing conversion can lose information.</span></span> <span data-ttu-id="4008e-722">例如，將32位帶正負號的整數轉換為64位帶正負號的整數是擴輾轉換，將64位帶正負號的整數轉換為32位帶正負號的整數是縮小轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-722">For example, converting a 32-bit signed integer to a 64-bit signed integer is a widening conversion, and converting a 64-bit signed integer to a 32-bit signed integer is a narrowing conversion.</span></span> <span data-ttu-id="4008e-723">如需轉換的詳細資訊，請參閱 <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-723">For more information about conversions, see <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a>.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-724">Nonintrinsic (使用者定義的) 實數值型別只與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-724">A nonintrinsic (user-defined) value type is compatible only with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-725">列舉具有對 <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> 其基礎類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-725">Enumerations have an implicit conversion to <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> and to their underlying type.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-726">如果中的每個專案都需要向下 <code>sourceArray</code> 轉換 (例如，從基類到衍生類別，或從介面傳送至物件) 而且一或多個專案無法轉換成中的對應類型 <code>destinationArray</code> ， <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-726">If every element in <code>sourceArray</code> requires a downcast (for example, from a base class to a derived class or from an interface to an object) and one or more elements cannot be cast to the corresponding type in <code>destinationArray</code>, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+<p><span data-ttu-id="4008e-727">如果這個方法在複製時擲回例外狀況，的狀態 <code>destinationArray</code> 就會是未定義的。</span><span class="sxs-lookup"><span data-stu-id="4008e-727">If this method throws an exception while copying, the state of <code>destinationArray</code> is undefined.</span></span></p>
+<p><span data-ttu-id="4008e-728">這個方法是 () 作業的 O <code>n</code> ，其中 <code>n</code> 是 <code>length</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-728">This method is an O(<code>n</code>) operation, where <code>n</code> is <code>length</code>.</span></span></p>
+
+
+
+
+
+    	<h3>另請參閱</h3>
+    	<ul>
+<li><a href="system.array.constrainedcopy?view=net-6.0#System_Array_ConstrainedCopy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_" data-linktype="relative-path">ConstrainedCopy(Array, Int32, Array, Int32, Int32)</a></li>
+<li><a href="system.array.clone?view=net-6.0#System_Array_Clone" data-linktype="relative-path">Clone()</a></li>
+</ul>
+
+  <div>
+  <h3>適用於</h3>
+  <details>
+    <summary class="has-margin-bottom-medium">
+    </summary>
+    <div class="table-scroll-wrapper moniker-applies-to-overloadmember">
+      <table class='table has-border has-inner-borders has-header-background has-row-header-background'>
+        <thead>
+        </thead>
+      </table>
+    </div>
+  </details>
+</div></div>
+
+</div><div data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+
+<div class="memberNameHolder">
+	<h2 id="System_Array_Copy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_">
+	    Copy(Array, Int32, Array, Int32, Int32)
+	</h2>
+</div>
+
+<div class="memberInfo">
+
+	<div class="summaryHolder">
+		<div class="summary clearFix">
+			<p><span data-ttu-id="4008e-639">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從指定的來源索引開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從指定的目的索引開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-639">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified source index and pastes them to another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the specified destination index.</span></span> <span data-ttu-id="4008e-640">長度與索引都指定為 32 位元的整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-640">The length and the indexes are specified as 32-bit integers.</span></span></p>
+
+		</div>
+	</div>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="cpp lang-cpp" dir="ltr">public:
+ static void Copy(Array ^ sourceArray, int sourceIndex, Array ^ destinationArray, int destinationIndex, int length);</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="csharp lang-csharp" dir="ltr">public static void Copy (Array sourceArray, int sourceIndex, Array destinationArray, int destinationIndex, int length);</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="fsharp lang-fsharp" dir="ltr">static member Copy : Array * int * Array * int * int -&gt; unit</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="vb lang-vb" dir="ltr">Public Shared Sub Copy (sourceArray As Array, sourceIndex As Integer, destinationArray As Array, destinationIndex As Integer, length As Integer)</code></pre>
+	<h4 class="propertyInfoTitle stack">參數</h4>
+	<div class="propertyInfo">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-634">包含要複製資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-634">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that contains the data to copy.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceIndex</span>
+			</dt>
+			<dd>
+				<a href='system.int32?view=net-6.0' data-linktype="relative-path">Int32</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-635">32 位元的整數，代表 <code data-dev-comment-type="paramref">sourceArray</code> 中的索引，由此開始複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-635">A 32-bit integer that represents the index in the <code data-dev-comment-type="paramref">sourceArray</code> at which copying begins.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-636">接收資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-636">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that receives the data.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationIndex</span>
+			</dt>
+			<dd>
+				<a href='system.int32?view=net-6.0' data-linktype="relative-path">Int32</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-637">32 位元的整數，代表 <code data-dev-comment-type="paramref">destinationArray</code> 中的索引，由此開始儲存。</span><span class="sxs-lookup"><span data-stu-id="4008e-637">A 32-bit integer that represents the index in the <code data-dev-comment-type="paramref">destinationArray</code> at which storing begins.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">length</span>
+			</dt>
+			<dd>
+				<a href='system.int32?view=net-6.0' data-linktype="relative-path">Int32</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-638">32 位元整數，表示要複製的項目數目。</span><span class="sxs-lookup"><span data-stu-id="4008e-638">A 32-bit integer that represents the number of elements to copy.</span></span></p>
+
+	</div>
+
+
+	<h4 class="propertyInfoTitle stack">例外狀況</h4>
+		<div class="propertyInfo">
+		    <div class="subtle">
+			    <a href='system.argumentnullexception?view=net-6.0' data-linktype="relative-path">ArgumentNullException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-674"><code data-dev-comment-type="paramref">sourceArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-674"><code data-dev-comment-type="paramref">sourceArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+<p><span data-ttu-id="4008e-675">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-675">-or-</span></span></p>
+<p><span data-ttu-id="4008e-676"><code data-dev-comment-type="paramref">destinationArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-676"><code data-dev-comment-type="paramref">destinationArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.rankexception?view=net-6.0' data-linktype="relative-path">RankException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-677"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 的順位不同。</span><span class="sxs-lookup"><span data-stu-id="4008e-677"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> have different ranks.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.arraytypemismatchexception?view=net-6.0' data-linktype="relative-path">ArrayTypeMismatchException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-678"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-678"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> are of incompatible types.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.invalidcastexception?view=net-6.0' data-linktype="relative-path">InvalidCastException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-679"><code data-dev-comment-type="paramref">sourceArray</code> 至少有一個項目無法轉換成 <code data-dev-comment-type="paramref">destinationArray</code> 的類型。</span><span class="sxs-lookup"><span data-stu-id="4008e-679">At least one element in <code data-dev-comment-type="paramref">sourceArray</code> cannot be cast to the type of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentoutofrangeexception?view=net-6.0' data-linktype="relative-path">ArgumentOutOfRangeException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-680"><code data-dev-comment-type="paramref">sourceIndex</code> 小於 <code data-dev-comment-type="paramref">sourceArray</code> 的第一個維度下限。</span><span class="sxs-lookup"><span data-stu-id="4008e-680"><code data-dev-comment-type="paramref">sourceIndex</code> is less than the lower bound of the first dimension of <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-681">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-681">-or-</span></span></p>
+<p><span data-ttu-id="4008e-682"><code data-dev-comment-type="paramref">destinationIndex</code> 小於 <code data-dev-comment-type="paramref">destinationArray</code> 的第一個維度下限。</span><span class="sxs-lookup"><span data-stu-id="4008e-682"><code data-dev-comment-type="paramref">destinationIndex</code> is less than the lower bound of the first dimension of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-683">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-683">-or-</span></span></p>
+<p><span data-ttu-id="4008e-684"><code data-dev-comment-type="paramref">length</code> 小於零。</span><span class="sxs-lookup"><span data-stu-id="4008e-684"><code data-dev-comment-type="paramref">length</code> is less than zero.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentexception?view=net-6.0' data-linktype="relative-path">ArgumentException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-685"><code data-dev-comment-type="paramref">length</code> 大於從 <code data-dev-comment-type="paramref">sourceIndex</code> 到 <code data-dev-comment-type="paramref">sourceArray</code> 結尾的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-685"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements from <code data-dev-comment-type="paramref">sourceIndex</code> to the end of <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-686">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-686">-or-</span></span></p>
+<p><span data-ttu-id="4008e-687"><code data-dev-comment-type="paramref">length</code> 大於從 <code data-dev-comment-type="paramref">destinationIndex</code> 到 <code data-dev-comment-type="paramref">destinationArray</code> 結尾的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-687"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements from <code data-dev-comment-type="paramref">destinationIndex</code> to the end of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+  
+
+    	<h3>備註</h3>		
+    	<p><span data-ttu-id="4008e-641"><code>sourceArray</code>和 <code>destinationArray</code> 參數的維度數目必須相同。</span><span class="sxs-lookup"><span data-stu-id="4008e-641">The <code>sourceArray</code> and <code>destinationArray</code> parameters must have the same number of dimensions.</span></span> <span data-ttu-id="4008e-642">此外， <code>destinationArray</code> 必須已經過維度，而且必須有足夠數目的元素從位置開始， <code>destinationIndex</code> 以容納複製的資料。</span><span class="sxs-lookup"><span data-stu-id="4008e-642">In addition, <code>destinationArray</code> must already have been dimensioned and must have a sufficient number of elements starting from the <code>destinationIndex</code> position to accommodate the copied data.</span></span></p>
+<p><span data-ttu-id="4008e-643">在多維度陣列之間進行複製時，陣列的行為就像是一維一維陣列，其中 (或資料行) 的資料列在概念上是端對端的配置。</span><span class="sxs-lookup"><span data-stu-id="4008e-643">When copying between multidimensional arrays, the array behaves like a long one-dimensional array, where the rows (or columns) are conceptually laid end-to-end.</span></span> <span data-ttu-id="4008e-644">例如，如果陣列有三個數據列 (或每個資料行) 有四個元素，則從陣列的開頭複製六個元素，就會將第一個資料列的四個元素複製 (或資料行) ，而第二個數據列的前兩個元素 (或資料行) 。</span><span class="sxs-lookup"><span data-stu-id="4008e-644">For example, if an array has three rows (or columns) with four elements each, copying six elements from the beginning of the array would copy all four elements of the first row (or column) and the first two elements of the second row (or column).</span></span> <span data-ttu-id="4008e-645">若要開始從第三個數據列的第二個元素複製 (或資料行) ， <code>sourceIndex</code> 必須是第一個資料列的上限 (或資料行) 加上第二個數據列 (或資料行的長度) 加上二。</span><span class="sxs-lookup"><span data-stu-id="4008e-645">To start copying from the second element of the third row (or column), <code>sourceIndex</code> must be the upper bound of the first row (or column) plus the length of the second row (or column) plus two.</span></span></p>
+<p><span data-ttu-id="4008e-646">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 重迭，這個方法的行為就像是在 <code>sourceArray</code> 覆寫之前，保留在暫存位置中的原始值一樣 <code>destinationArray</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-646">If <code>sourceArray</code> and <code>destinationArray</code> overlap, this method behaves as if the original values of <code>sourceArray</code> were preserved in a temporary location before <code>destinationArray</code> is overwritten.</span></span></p>
+<p><span data-ttu-id="4008e-647">[C++]</span><span class="sxs-lookup"><span data-stu-id="4008e-647">[C++]</span></span></p>
+<p><span data-ttu-id="4008e-648">這個方法相當於標準 C/c + + 函式 <code>memmove</code> ，而不是 <code>memcpy</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-648">This method is equivalent to the standard C/C++ function <code>memmove</code>, not <code>memcpy</code>.</span></span></p>
+<p><span data-ttu-id="4008e-649">陣列可以是參考型別陣列或實數值型別的陣列。</span><span class="sxs-lookup"><span data-stu-id="4008e-649">The arrays can be reference-type arrays or value-type arrays.</span></span> <span data-ttu-id="4008e-650">視需要執行型別向下檢視。</span><span class="sxs-lookup"><span data-stu-id="4008e-650">Type downcasting is performed, as required.</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-651">從參考型別陣列複製到實數值型別陣列時，每個專案都會取消裝箱然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-651">When copying from a reference-type array to a value-type array, each element is unboxed and then copied.</span></span> <span data-ttu-id="4008e-652">從實數值型別陣列複製到參考型別陣列時，會將每個元素全部裝箱，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-652">When copying from a value-type array to a reference-type array, each element is boxed and then copied.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-653">從參考型別或實數值型別陣列複製到 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列時， <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 會建立以保存每個值或參考，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-653">When copying from a reference-type or value-type array to an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array, an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> is created to hold each value or reference and then copied.</span></span> <span data-ttu-id="4008e-654">從 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列複製到參考型別或實數值型別陣列，且無法進行指派時，會擲回 <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-654">When copying from an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array to a reference-type or value-type array and the assignment is not possible, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-655">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 都是型別陣列，或都是類型的陣列 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> ，則會執行淺層複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-655">If <code>sourceArray</code> and <code>destinationArray</code> are both reference-type arrays or are both arrays of type <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a>, a shallow copy is performed.</span></span> <span data-ttu-id="4008e-656">的淺層複本 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 是新的， <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 其中包含與原始相同之專案的參考 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-656">A shallow copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> is a new <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> containing references to the same elements as the original <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a>.</span></span> <span data-ttu-id="4008e-657">元素本身或專案所參考的任何專案都不會複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-657">The elements themselves or anything referenced by the elements are not copied.</span></span> <span data-ttu-id="4008e-658">相反地，的深層複製會 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 複製元素，以及專案直接或間接參考的所有專案。</span><span class="sxs-lookup"><span data-stu-id="4008e-658">In contrast, a deep copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> copies the elements and everything directly or indirectly referenced by the elements.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-659"><a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a>如果陣列的類型不相容，則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-659">An <a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a> is thrown if the arrays are of incompatible types.</span></span> <span data-ttu-id="4008e-660">類型相容性的定義如下：</span><span class="sxs-lookup"><span data-stu-id="4008e-660">Type compatibility is defined as follows:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-661">類型與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-661">A type is compatible with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-662">實值型別與 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 和具有實值型別的介面型別相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-662">A value type is compatible with <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> and with an interface type implemented by that value type.</span></span> <span data-ttu-id="4008e-663">只有當實數值型別直接實作為介面時，才會將其視為連接到介面。</span><span class="sxs-lookup"><span data-stu-id="4008e-663">A value type is considered connected to an interface only if it implements that interface directly.</span></span> <span data-ttu-id="4008e-664">中斷連線的類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-664">Disconnected types are not compatible.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-665">如果從來源類型複製到目的類型是擴輾轉換，則兩個內建 (預先定義的) 實數值型別都是相容的。</span><span class="sxs-lookup"><span data-stu-id="4008e-665">Two intrinsic (predefined) value types are compatible if copying from the source type to the destination type is a widening conversion.</span></span> <span data-ttu-id="4008e-666">擴輾轉換永遠不會遺失資訊，而縮小轉換可能會遺失資訊。</span><span class="sxs-lookup"><span data-stu-id="4008e-666">A widening conversion never loses information, whereas a narrowing conversion can lose information.</span></span> <span data-ttu-id="4008e-667">例如，將32位帶正負號的整數轉換為64位帶正負號的整數是擴輾轉換，將64位帶正負號的整數轉換為32位帶正負號的整數是縮小轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-667">For example, converting a 32-bit signed integer to a 64-bit signed integer is a widening conversion, and converting a 64-bit signed integer to a 32-bit signed integer is a narrowing conversion.</span></span> <span data-ttu-id="4008e-668">如需轉換的詳細資訊，請參閱 <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-668">For more information about conversions, see <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a>.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-669">Nonintrinsic (使用者定義的) 實數值型別只與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-669">A nonintrinsic (user-defined) value type is compatible only with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-670">列舉具有對 <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> 其基礎類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-670">Enumerations have an implicit conversion to <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> and to their underlying type.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-671">如果中的每個專案都需要向下 <code>sourceArray</code> 轉換 (例如，從基類到衍生類別，或從介面傳送至物件) 而且一或多個專案無法轉換成中的對應類型 <code>destinationArray</code> ， <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-671">If every element in <code>sourceArray</code> requires a downcast (for example, from a base class to a derived class or from an interface to an object) and one or more elements cannot be cast to the corresponding type in <code>destinationArray</code>, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+<p><span data-ttu-id="4008e-672">如果這個方法在複製時擲回例外狀況，的狀態 <code>destinationArray</code> 就會是未定義的。</span><span class="sxs-lookup"><span data-stu-id="4008e-672">If this method throws an exception while copying, the state of <code>destinationArray</code> is undefined.</span></span></p>
+<p><span data-ttu-id="4008e-673">這個方法是 () 作業的 O <code>n</code> ，其中 <code>n</code> 是 <code>length</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-673">This method is an O(<code>n</code>) operation, where <code>n</code> is <code>length</code>.</span></span></p>
+
+
+
+
+
+    	<h3>另請參閱</h3>
+    	<ul>
+<li><a href="system.array.constrainedcopy?view=net-6.0#System_Array_ConstrainedCopy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_" data-linktype="relative-path">ConstrainedCopy(Array, Int32, Array, Int32, Int32)</a></li>
+<li><a href="system.array.clone?view=net-6.0#System_Array_Clone" data-linktype="relative-path">Clone()</a></li>
+</ul>
+
+  <div>
+  <h3>適用於</h3>
+  <details>
+    <summary class="has-margin-bottom-medium">
+    </summary>
+    <div class="table-scroll-wrapper moniker-applies-to-overloadmember">
+      <table class='table has-border has-inner-borders has-header-background has-row-header-background'>
+        <thead>
+        </thead>
+      </table>
+    </div>
+  </details>
+</div></div>
+
+</div><div data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+
+<div class="memberNameHolder">
+	<h2 id="System_Array_Copy_System_Array_System_Array_System_Int64_">
+	    Copy(Array, Array, Int64)
+	</h2>
+</div>
+
+<div class="memberInfo">
+
+	<div class="summaryHolder">
+		<div class="summary clearFix">
+			<p><span data-ttu-id="4008e-590">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從第一個項目開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從第一個項目開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-590">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element and pastes them into another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element.</span></span> <span data-ttu-id="4008e-591">長度是以 64 位元整數方式指定。</span><span class="sxs-lookup"><span data-stu-id="4008e-591">The length is specified as a 64-bit integer.</span></span></p>
+
+		</div>
+	</div>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="cpp lang-cpp" dir="ltr">public:
+ static void Copy(Array ^ sourceArray, Array ^ destinationArray, long length);</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="csharp lang-csharp" dir="ltr">public static void Copy (Array sourceArray, Array destinationArray, long length);</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="fsharp lang-fsharp" dir="ltr">static member Copy : Array * Array * int64 -&gt; unit</code></pre>
+	<pre class="wrap" data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="vb lang-vb" dir="ltr">Public Shared Sub Copy (sourceArray As Array, destinationArray As Array, length As Long)</code></pre>
+	<h4 class="propertyInfoTitle stack">參數</h4>
+	<div class="propertyInfo">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-586">包含要複製資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-586">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that contains the data to copy.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-587">接收資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-587">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that receives the data.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" net-5.0 net-6.0 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">length</span>
+			</dt>
+			<dd>
+				<a href='system.int64?view=net-6.0' data-linktype="relative-path">Int64</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-588">64 位元整數，表示要複製的項目數目。</span><span class="sxs-lookup"><span data-stu-id="4008e-588">A 64-bit integer that represents the number of elements to copy.</span></span> <span data-ttu-id="4008e-589">這個整數必須在零和 <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a> 之間 (包含頭尾)。</span><span class="sxs-lookup"><span data-stu-id="4008e-589">The integer must be between zero and <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>, inclusive.</span></span></p>
+
+	</div>
+
+
+	<h4 class="propertyInfoTitle stack">例外狀況</h4>
+		<div class="propertyInfo">
+		    <div class="subtle">
+			    <a href='system.argumentnullexception?view=net-6.0' data-linktype="relative-path">ArgumentNullException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-624"><code data-dev-comment-type="paramref">sourceArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-624"><code data-dev-comment-type="paramref">sourceArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+<p><span data-ttu-id="4008e-625">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-625">-or-</span></span></p>
+<p><span data-ttu-id="4008e-626"><code data-dev-comment-type="paramref">destinationArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-626"><code data-dev-comment-type="paramref">destinationArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.rankexception?view=net-6.0' data-linktype="relative-path">RankException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-627"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 的順位不同。</span><span class="sxs-lookup"><span data-stu-id="4008e-627"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> have different ranks.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.arraytypemismatchexception?view=net-6.0' data-linktype="relative-path">ArrayTypeMismatchException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-628"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-628"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> are of incompatible types.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.invalidcastexception?view=net-6.0' data-linktype="relative-path">InvalidCastException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-629"><code data-dev-comment-type="paramref">sourceArray</code> 至少有一個項目無法轉換成 <code data-dev-comment-type="paramref">destinationArray</code> 的類型。</span><span class="sxs-lookup"><span data-stu-id="4008e-629">At least one element in <code data-dev-comment-type="paramref">sourceArray</code> cannot be cast to the type of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentoutofrangeexception?view=net-6.0' data-linktype="relative-path">ArgumentOutOfRangeException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-630"><code data-dev-comment-type="paramref">length</code> 小於 0 或大於 <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-630"><code data-dev-comment-type="paramref">length</code> is less than 0 or greater than <a href='system.int32.maxvalue?view=net-6.0' data-linktype="relative-path">MaxValue</a>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentexception?view=net-6.0' data-linktype="relative-path">ArgumentException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-631"><code data-dev-comment-type="paramref">length</code> 大於 <code data-dev-comment-type="paramref">sourceArray</code> 的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-631"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements in <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-632">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-632">-or-</span></span></p>
+<p><span data-ttu-id="4008e-633"><code data-dev-comment-type="paramref">length</code> 大於 <code data-dev-comment-type="paramref">destinationArray</code> 的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-633"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements in <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+  
+
+    	<h3>備註</h3>		
+    	<p><span data-ttu-id="4008e-592"><code>sourceArray</code>和 <code>destinationArray</code> 參數的維度數目必須相同。</span><span class="sxs-lookup"><span data-stu-id="4008e-592">The <code>sourceArray</code> and <code>destinationArray</code> parameters must have the same number of dimensions.</span></span> <span data-ttu-id="4008e-593">此外， <code>destinationArray</code> 必須已經過維度，而且必須有足夠的元素數目來容納複製的資料。</span><span class="sxs-lookup"><span data-stu-id="4008e-593">In addition, <code>destinationArray</code> must already have been dimensioned and must have a sufficient number of elements to accommodate the copied data.</span></span></p>
+<p><span data-ttu-id="4008e-594">在多維度陣列之間進行複製時，陣列的行為就像是一維一維陣列，其中 (或資料行) 的資料列在概念上是端對端的配置。</span><span class="sxs-lookup"><span data-stu-id="4008e-594">When copying between multidimensional arrays, the array behaves like a long one-dimensional array, where the rows (or columns) are conceptually laid end to end.</span></span> <span data-ttu-id="4008e-595">例如，如果陣列有三個數據列 (或每個資料行) 有四個元素，則從陣列的開頭複製六個元素，就會將第一個資料列的四個元素複製 (或資料行) ，而第二個數據列的前兩個元素 (或資料行) 。</span><span class="sxs-lookup"><span data-stu-id="4008e-595">For example, if an array has three rows (or columns) with four elements each, copying six elements from the beginning of the array would copy all four elements of the first row (or column) and the first two elements of the second row (or column).</span></span></p>
+<p><span data-ttu-id="4008e-596">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 重迭，這個方法的行為就像是在 <code>sourceArray</code> 覆寫之前，保留在暫存位置中的原始值一樣 <code>destinationArray</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-596">If <code>sourceArray</code> and <code>destinationArray</code> overlap, this method behaves as if the original values of <code>sourceArray</code> were preserved in a temporary location before <code>destinationArray</code> is overwritten.</span></span></p>
+<p><span data-ttu-id="4008e-597">[C++]</span><span class="sxs-lookup"><span data-stu-id="4008e-597">[C++]</span></span></p>
+<p><span data-ttu-id="4008e-598">這個方法相當於標準 C/c + + 函式 <code>memmove</code> ，而不是 <code>memcpy</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-598">This method is equivalent to the standard C/C++ function <code>memmove</code>, not <code>memcpy</code>.</span></span></p>
+<p><span data-ttu-id="4008e-599">陣列可以是參考型別陣列或實數值型別的陣列。</span><span class="sxs-lookup"><span data-stu-id="4008e-599">The arrays can be reference-type arrays or value-type arrays.</span></span> <span data-ttu-id="4008e-600">視需要執行型別向下檢視。</span><span class="sxs-lookup"><span data-stu-id="4008e-600">Type downcasting is performed, as required.</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-601">從參考型別陣列複製到實數值型別陣列時，每個專案都會取消裝箱然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-601">When copying from a reference-type array to a value-type array, each element is unboxed and then copied.</span></span> <span data-ttu-id="4008e-602">從實數值型別陣列複製到參考型別陣列時，會將每個元素全部裝箱，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-602">When copying from a value-type array to a reference-type array, each element is boxed and then copied.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-603">從參考型別或實數值型別陣列複製到 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列時， <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 會建立以保存每個值或參考，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-603">When copying from a reference-type or value-type array to an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array, an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> is created to hold each value or reference and then copied.</span></span> <span data-ttu-id="4008e-604">從 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列複製到參考型別或實數值型別陣列，且無法進行指派時，會擲回 <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-604">When copying from an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array to a reference-type or value-type array and the assignment is not possible, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-605">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 都是型別陣列，或都是類型的陣列 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> ，則會執行淺層複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-605">If <code>sourceArray</code> and <code>destinationArray</code> are both reference-type arrays or are both arrays of type <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a>, a shallow copy is performed.</span></span> <span data-ttu-id="4008e-606">的淺層複本 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 是新的， <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 其中包含與原始相同之專案的參考 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-606">A shallow copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> is a new <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> containing references to the same elements as the original <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a>.</span></span> <span data-ttu-id="4008e-607">元素本身或專案所參考的任何專案都不會複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-607">The elements themselves or anything referenced by the elements are not copied.</span></span> <span data-ttu-id="4008e-608">相反地，的深層複製會 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 複製元素，以及專案直接或間接參考的所有專案。</span><span class="sxs-lookup"><span data-stu-id="4008e-608">In contrast, a deep copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> copies the elements and everything directly or indirectly referenced by the elements.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-609"><a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a>如果陣列的類型不相容，則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-609">An <a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a> is thrown if the arrays are of incompatible types.</span></span> <span data-ttu-id="4008e-610">類型相容性的定義如下：</span><span class="sxs-lookup"><span data-stu-id="4008e-610">Type compatibility is defined as follows:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-611">類型與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-611">A type is compatible with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-612">實值型別與 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 和具有實值型別的介面型別相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-612">A value type is compatible with <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> and with an interface type implemented by that value type.</span></span> <span data-ttu-id="4008e-613">只有當實數值型別直接實作為介面時，才會將其視為連接到介面。</span><span class="sxs-lookup"><span data-stu-id="4008e-613">A value type is considered connected to an interface only if it implements that interface directly.</span></span> <span data-ttu-id="4008e-614">中斷連線的類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-614">Disconnected types are not compatible.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-615">如果從來源類型複製到目的類型是擴輾轉換，則兩個內建 (預先定義的) 實數值型別都是相容的。</span><span class="sxs-lookup"><span data-stu-id="4008e-615">Two intrinsic (predefined) value types are compatible if copying from the source type to the destination type is a widening conversion.</span></span> <span data-ttu-id="4008e-616">擴輾轉換永遠不會遺失資訊，而縮小轉換可能會遺失資訊。</span><span class="sxs-lookup"><span data-stu-id="4008e-616">A widening conversion never loses information, whereas a narrowing conversion can lose information.</span></span> <span data-ttu-id="4008e-617">例如，將32位帶正負號的整數轉換為64位帶正負號的整數是擴輾轉換，將64位帶正負號的整數轉換為32位帶正負號的整數是縮小轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-617">For example, converting a 32-bit signed integer to a 64-bit signed integer is a widening conversion, and converting a 64-bit signed integer to a 32-bit signed integer is a narrowing conversion.</span></span> <span data-ttu-id="4008e-618">如需轉換的詳細資訊，請參閱 <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-618">For more information about conversions, see <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a>.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-619">Nonintrinsic (使用者定義的) 實數值型別只與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-619">A nonintrinsic (user-defined) value type is compatible only with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-620">列舉具有對 <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> 其基礎類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-620">Enumerations have an implicit conversion to <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> and to their underlying type.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-621">如果中的每個專案都需要向下 <code>sourceArray</code> 轉換 (例如，從基類到衍生類別，或從介面傳送至物件) 而且一或多個專案無法轉換成中的對應類型 <code>destinationArray</code> ， <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-621">If every element in <code>sourceArray</code> requires a downcast (for example, from a base class to a derived class or from an interface to an object) and one or more elements cannot be cast to the corresponding type in <code>destinationArray</code>, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+<p><span data-ttu-id="4008e-622">如果這個方法在複製時擲回例外狀況，的狀態 <code>destinationArray</code> 就會是未定義的。</span><span class="sxs-lookup"><span data-stu-id="4008e-622">If this method throws an exception while copying, the state of <code>destinationArray</code> is undefined.</span></span></p>
+<p><span data-ttu-id="4008e-623">這個方法是 () 作業的 O <code>n</code> ，其中 <code>n</code> 是 <code>length</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-623">This method is an O(<code>n</code>) operation, where <code>n</code> is <code>length</code>.</span></span></p>
+
+
+
+
+
+    	<h3>另請參閱</h3>
+    	<ul>
+<li><a href="system.array.constrainedcopy?view=net-6.0#System_Array_ConstrainedCopy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_" data-linktype="relative-path">ConstrainedCopy(Array, Int32, Array, Int32, Int32)</a></li>
+<li><a href="system.array.clone?view=net-6.0#System_Array_Clone" data-linktype="relative-path">Clone()</a></li>
+</ul>
+
+  <div>
+  <h3>適用於</h3>
+  <details>
+    <summary class="has-margin-bottom-medium">
+    </summary>
+    <div class="table-scroll-wrapper moniker-applies-to-overloadmember">
+      <table class='table has-border has-inner-borders has-header-background has-row-header-background'>
+        <thead>
+        </thead>
+      </table>
+    </div>
+  </details>
+</div></div>
+
+</div><div data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">
+
+<div class="memberNameHolder">
+	<h2 id="System_Array_Copy_System_Array_System_Array_System_Int32_">
+	    Copy(Array, Array, Int32)
+	</h2>
+</div>
+
+<div class="memberInfo">
+
+	<div class="summaryHolder">
+		<div class="summary clearFix">
+			<p><span data-ttu-id="4008e-542">從 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> 複製某範圍的項目 (從第一個項目開始)，並且將它們貼至另一個 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> (從第一個項目開始)。</span><span class="sxs-lookup"><span data-stu-id="4008e-542">Copies a range of elements from an <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element and pastes them into another <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> starting at the first element.</span></span> <span data-ttu-id="4008e-543">長度已指定為 32 位元整數。</span><span class="sxs-lookup"><span data-stu-id="4008e-543">The length is specified as a 32-bit integer.</span></span></p>
+
+		</div>
+	</div>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="cpp lang-cpp" dir="ltr">public:
+ static void Copy(Array ^ sourceArray, Array ^ destinationArray, int length);</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="csharp lang-csharp" dir="ltr">public static void Copy (Array sourceArray, Array destinationArray, int length);</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="fsharp lang-fsharp" dir="ltr">static member Copy : Array * Array * int -&gt; unit</code></pre>
+	<pre class="wrap" data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 "><code class="vb lang-vb" dir="ltr">Public Shared Sub Copy (sourceArray As Array, destinationArray As Array, length As Integer)</code></pre>
+	<h4 class="propertyInfoTitle stack">參數</h4>
+	<div class="propertyInfo">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">sourceArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-539">包含要複製資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-539">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that contains the data to copy.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">destinationArray</span>
+			</dt>
+			<dd>
+				<a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-540">接收資料的 <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a>。</span><span class="sxs-lookup"><span data-stu-id="4008e-540">The <a href='system.array?view=net-6.0' data-linktype="relative-path">Array</a> that receives the data.</span></span></p>
+
+	</div>
+	<div class="propertyInfo stack">
+		<dl class="parameterList">
+			<dt>
+			
+			<span data-moniker=" dotnet-uwp-10.0 net-5.0 net-6.0 netcore-1.0 netcore-1.1 netcore-2.0 netcore-2.1 netcore-2.2 netcore-3.0 netcore-3.1 netframework-1.1 netframework-2.0 netframework-3.0 netframework-3.5 netframework-4.0 netframework-4.5 netframework-4.5.1 netframework-4.5.2 netframework-4.6 netframework-4.6.1 netframework-4.6.2 netframework-4.7 netframework-4.7.1 netframework-4.7.2 netframework-4.8 netstandard-1.0 netstandard-1.1 netstandard-1.2 netstandard-1.3 netstandard-1.4 netstandard-1.5 netstandard-1.6 netstandard-2.0 netstandard-2.1 xamarinandroid-7.1 xamarinios-10.8 xamarinmac-3.0 ">length</span>
+			</dt>
+			<dd>
+				<a href='system.int32?view=net-6.0' data-linktype="relative-path">Int32</a>
+				
+			</dd>
+		</dl>
+		<p><span data-ttu-id="4008e-541">32 位元整數，表示要複製的項目數目。</span><span class="sxs-lookup"><span data-stu-id="4008e-541">A 32-bit integer that represents the number of elements to copy.</span></span></p>
+
+	</div>
+
+
+	<h4 class="propertyInfoTitle stack">例外狀況</h4>
+		<div class="propertyInfo">
+		    <div class="subtle">
+			    <a href='system.argumentnullexception?view=net-6.0' data-linktype="relative-path">ArgumentNullException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-576"><code data-dev-comment-type="paramref">sourceArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-576"><code data-dev-comment-type="paramref">sourceArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+<p><span data-ttu-id="4008e-577">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-577">-or-</span></span></p>
+<p><span data-ttu-id="4008e-578"><code data-dev-comment-type="paramref">destinationArray</code> 為 <code data-dev-comment-type="langword">null</code>。</span><span class="sxs-lookup"><span data-stu-id="4008e-578"><code data-dev-comment-type="paramref">destinationArray</code> is <code data-dev-comment-type="langword">null</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.rankexception?view=net-6.0' data-linktype="relative-path">RankException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-579"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 的順位不同。</span><span class="sxs-lookup"><span data-stu-id="4008e-579"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> have different ranks.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.arraytypemismatchexception?view=net-6.0' data-linktype="relative-path">ArrayTypeMismatchException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-580"><code data-dev-comment-type="paramref">sourceArray</code> 和 <code data-dev-comment-type="paramref">destinationArray</code> 類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-580"><code data-dev-comment-type="paramref">sourceArray</code> and <code data-dev-comment-type="paramref">destinationArray</code> are of incompatible types.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.invalidcastexception?view=net-6.0' data-linktype="relative-path">InvalidCastException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-581"><code data-dev-comment-type="paramref">sourceArray</code> 至少有一個項目無法轉換成 <code data-dev-comment-type="paramref">destinationArray</code> 的類型。</span><span class="sxs-lookup"><span data-stu-id="4008e-581">At least one element in <code data-dev-comment-type="paramref">sourceArray</code> cannot be cast to the type of <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentoutofrangeexception?view=net-6.0' data-linktype="relative-path">ArgumentOutOfRangeException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-582"><code data-dev-comment-type="paramref">length</code> 小於零。</span><span class="sxs-lookup"><span data-stu-id="4008e-582"><code data-dev-comment-type="paramref">length</code> is less than zero.</span></span></p>
+
+		</div>
+		<div class="propertyInfo stack">
+		    <div class="subtle">
+			    <a href='system.argumentexception?view=net-6.0' data-linktype="relative-path">ArgumentException</a>
+		    </div>
+		    <p><span data-ttu-id="4008e-583"><code data-dev-comment-type="paramref">length</code> 大於 <code data-dev-comment-type="paramref">sourceArray</code> 的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-583"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements in <code data-dev-comment-type="paramref">sourceArray</code>.</span></span></p>
+<p><span data-ttu-id="4008e-584">-或-</span><span class="sxs-lookup"><span data-stu-id="4008e-584">-or-</span></span></p>
+<p><span data-ttu-id="4008e-585"><code data-dev-comment-type="paramref">length</code> 大於 <code data-dev-comment-type="paramref">destinationArray</code> 的項目數。</span><span class="sxs-lookup"><span data-stu-id="4008e-585"><code data-dev-comment-type="paramref">length</code> is greater than the number of elements in <code data-dev-comment-type="paramref">destinationArray</code>.</span></span></p>
+
+		</div>
+  
+
+    	<h3>備註</h3>		
+    	<p><span data-ttu-id="4008e-544"><code>sourceArray</code>和 <code>destinationArray</code> 參數的維度數目必須相同。</span><span class="sxs-lookup"><span data-stu-id="4008e-544">The <code>sourceArray</code> and <code>destinationArray</code> parameters must have the same number of dimensions.</span></span> <span data-ttu-id="4008e-545">此外， <code>destinationArray</code> 必須已經過維度，而且必須有足夠的元素數目來容納複製的資料。</span><span class="sxs-lookup"><span data-stu-id="4008e-545">In addition, <code>destinationArray</code> must already have been dimensioned and must have a sufficient number of elements to accommodate the copied data.</span></span></p>
+<p><span data-ttu-id="4008e-546">在多維度陣列之間進行複製時，陣列的行為就像是一維一維陣列，其中 (或資料行) 的資料列在概念上是端對端的配置。</span><span class="sxs-lookup"><span data-stu-id="4008e-546">When copying between multidimensional arrays, the array behaves like a long one-dimensional array, where the rows (or columns) are conceptually laid end to end.</span></span> <span data-ttu-id="4008e-547">例如，如果陣列有三個數據列 (或每個資料行) 有四個元素，則從陣列的開頭複製六個元素，就會將第一個資料列的四個元素複製 (或資料行) ，而第二個數據列的前兩個元素 (或資料行) 。</span><span class="sxs-lookup"><span data-stu-id="4008e-547">For example, if an array has three rows (or columns) with four elements each, copying six elements from the beginning of the array would copy all four elements of the first row (or column) and the first two elements of the second row (or column).</span></span></p>
+<p><span data-ttu-id="4008e-548">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 重迭，這個方法的行為就像是在 <code>sourceArray</code> 覆寫之前，保留在暫存位置中的原始值一樣 <code>destinationArray</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-548">If <code>sourceArray</code> and <code>destinationArray</code> overlap, this method behaves as if the original values of <code>sourceArray</code> were preserved in a temporary location before <code>destinationArray</code> is overwritten.</span></span></p>
+<p><span data-ttu-id="4008e-549">[C++]</span><span class="sxs-lookup"><span data-stu-id="4008e-549">[C++]</span></span></p>
+<p><span data-ttu-id="4008e-550">這個方法相當於標準 C/c + + 函式 <code>memmove</code> ，而不是 <code>memcpy</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-550">This method is equivalent to the standard C/C++ function <code>memmove</code>, not <code>memcpy</code>.</span></span></p>
+<p><span data-ttu-id="4008e-551">陣列可以是參考型別陣列或實數值型別的陣列。</span><span class="sxs-lookup"><span data-stu-id="4008e-551">The arrays can be reference-type arrays or value-type arrays.</span></span> <span data-ttu-id="4008e-552">視需要執行型別向下檢視。</span><span class="sxs-lookup"><span data-stu-id="4008e-552">Type downcasting is performed, as required.</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-553">從參考型別陣列複製到實數值型別陣列時，每個專案都會取消裝箱然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-553">When copying from a reference-type array to a value-type array, each element is unboxed and then copied.</span></span> <span data-ttu-id="4008e-554">從實數值型別陣列複製到參考型別陣列時，會將每個元素全部裝箱，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-554">When copying from a value-type array to a reference-type array, each element is boxed and then copied.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-555">從參考型別或實數值型別陣列複製到 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列時， <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 會建立以保存每個值或參考，然後複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-555">When copying from a reference-type or value-type array to an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array, an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> is created to hold each value or reference and then copied.</span></span> <span data-ttu-id="4008e-556">從 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 陣列複製到參考型別或實數值型別陣列，且無法進行指派時，會擲回 <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-556">When copying from an <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> array to a reference-type or value-type array and the assignment is not possible, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-557">如果 <code>sourceArray</code> 和 <code>destinationArray</code> 都是型別陣列，或都是類型的陣列 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> ，則會執行淺層複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-557">If <code>sourceArray</code> and <code>destinationArray</code> are both reference-type arrays or are both arrays of type <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a>, a shallow copy is performed.</span></span> <span data-ttu-id="4008e-558">的淺層複本 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 是新的， <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 其中包含與原始相同之專案的參考 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-558">A shallow copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> is a new <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> containing references to the same elements as the original <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a>.</span></span> <span data-ttu-id="4008e-559">元素本身或專案所參考的任何專案都不會複製。</span><span class="sxs-lookup"><span data-stu-id="4008e-559">The elements themselves or anything referenced by the elements are not copied.</span></span> <span data-ttu-id="4008e-560">相反地，的深層複製會 <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> 複製元素，以及專案直接或間接參考的所有專案。</span><span class="sxs-lookup"><span data-stu-id="4008e-560">In contrast, a deep copy of an <a href="system.array?view=net-6.0" data-linktype="relative-path">Array</a> copies the elements and everything directly or indirectly referenced by the elements.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-561"><a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a>如果陣列的類型不相容，則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-561">An <a href="system.arraytypemismatchexception?view=net-6.0" data-linktype="relative-path">ArrayTypeMismatchException</a> is thrown if the arrays are of incompatible types.</span></span> <span data-ttu-id="4008e-562">類型相容性的定義如下：</span><span class="sxs-lookup"><span data-stu-id="4008e-562">Type compatibility is defined as follows:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="4008e-563">類型與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-563">A type is compatible with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-564">實值型別與 <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> 和具有實值型別的介面型別相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-564">A value type is compatible with <a href="system.object?view=net-6.0" data-linktype="relative-path">Object</a> and with an interface type implemented by that value type.</span></span> <span data-ttu-id="4008e-565">只有當實數值型別直接實作為介面時，才會將其視為連接到介面。</span><span class="sxs-lookup"><span data-stu-id="4008e-565">A value type is considered connected to an interface only if it implements that interface directly.</span></span> <span data-ttu-id="4008e-566">中斷連線的類型不相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-566">Disconnected types are not compatible.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-567">如果從來源類型複製到目的類型是擴輾轉換，則兩個內建 (預先定義的) 實數值型別都是相容的。</span><span class="sxs-lookup"><span data-stu-id="4008e-567">Two intrinsic (predefined) value types are compatible if copying from the source type to the destination type is a widening conversion.</span></span> <span data-ttu-id="4008e-568">擴輾轉換永遠不會遺失資訊，而縮小轉換可能會遺失資訊。</span><span class="sxs-lookup"><span data-stu-id="4008e-568">A widening conversion never loses information, whereas a narrowing conversion can lose information.</span></span> <span data-ttu-id="4008e-569">例如，將32位帶正負號的整數轉換為64位帶正負號的整數是擴輾轉換，將64位帶正負號的整數轉換為32位帶正負號的整數是縮小轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-569">For example, converting a 32-bit signed integer to a 64-bit signed integer is a widening conversion, and converting a 64-bit signed integer to a 32-bit signed integer is a narrowing conversion.</span></span> <span data-ttu-id="4008e-570">如需轉換的詳細資訊，請參閱 <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-570">For more information about conversions, see <a href="system.convert?view=net-6.0" data-linktype="relative-path">Convert</a>.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-571">Nonintrinsic (使用者定義的) 實數值型別只與本身相容。</span><span class="sxs-lookup"><span data-stu-id="4008e-571">A nonintrinsic (user-defined) value type is compatible only with itself.</span></span></p>
+</li>
+<li><p><span data-ttu-id="4008e-572">列舉具有對 <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> 其基礎類型的隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="4008e-572">Enumerations have an implicit conversion to <a href="system.enum?view=net-6.0" data-linktype="relative-path">Enum</a> and to their underlying type.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="4008e-573">如果中的每個專案都需要向下 <code>sourceArray</code> 轉換 (例如，從基類到衍生類別，或從介面傳送至物件) 而且一或多個專案無法轉換成中的對應類型 <code>destinationArray</code> ， <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> 則會擲回。</span><span class="sxs-lookup"><span data-stu-id="4008e-573">If every element in <code>sourceArray</code> requires a downcast (for example, from a base class to a derived class or from an interface to an object) and one or more elements cannot be cast to the corresponding type in <code>destinationArray</code>, an <a href="system.invalidcastexception?view=net-6.0" data-linktype="relative-path">InvalidCastException</a> is thrown.</span></span></p>
+<p><span data-ttu-id="4008e-574">如果這個方法在複製時擲回例外狀況，的狀態 <code>destinationArray</code> 就會是未定義的。</span><span class="sxs-lookup"><span data-stu-id="4008e-574">If this method throws an exception while copying, the state of <code>destinationArray</code> is undefined.</span></span></p>
+<p><span data-ttu-id="4008e-575">這個方法是 () 作業的 O <code>n</code> ，其中 <code>n</code> 是 <code>length</code> 。</span><span class="sxs-lookup"><span data-stu-id="4008e-575">This method is an O(<code>n</code>) operation, where <code>n</code> is <code>length</code>.</span></span></p>
+
+
+
+
+
+    	<h3>另請參閱</h3>
+    	<ul>
+<li><a href="system.array.constrainedcopy?view=net-6.0#System_Array_ConstrainedCopy_System_Array_System_Int32_System_Array_System_Int32_System_Int32_" data-linktype="relative-path">ConstrainedCopy(Array, Int32, Array, Int32, Int32)</a></li>
+<li><a href="system.array.clone?view=net-6.0#System_Array_Clone" data-linktype="relative-path">Clone()</a></li>
+</ul>
+
+  <div>
+  <h3>適用於</h3>
+  <details>
+    <summary class="has-margin-bottom-medium">
+    </summary>
+    <div class="table-scroll-wrapper moniker-applies-to-overloadmember">
+      <table class='table has-border has-inner-borders has-header-background has-row-header-background'>
+        <thead>
+        </thead>
+      </table>
+    </div>
+  </details>
+</div></div>
+
+</div>
+
+
+
+							</div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations"></section>
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="border-top is-visible-interactive has-default-focus has-margin-top-large ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="佈景主題" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>佈景主題</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+淺色					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+深色					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高對比					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/previous-versions/" data-bi-name="archivelink">舊版文件</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/teamblog" data-bi-name="bloglink">部落格</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/contribute" data-bi-name="contributorGuide">參與</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隱私權與 Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/legal/termsofuse" data-bi-name="termsofuse">使用規定</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商標</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+						</div>
+					</div>
+
+						<div
+							class="font-size-sm right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="頁面動作">
+
+							<div id="affixed-right-container" class="doc-outline is-vertically-scrollable">
+								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="文章大綱">
+									<h3>本文內容</h3>
+								</nav>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height has-padding-right-extra-large-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="佈景主題" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>佈景主題</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+淺色					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+深色					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高對比					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/previous-versions/" data-bi-name="archivelink">舊版文件</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/teamblog" data-bi-name="bloglink">部落格</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/contribute" data-bi-name="contributorGuide">參與</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隱私權與 Cookie</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-tw/legal/termsofuse" data-bi-name="termsofuse">使用規定</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商標</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="動作面板" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
