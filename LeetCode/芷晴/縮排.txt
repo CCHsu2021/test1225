@@ -1,0 +1,23 @@
+        int length = merged.Length;
+        if (length % 2 == 0)
+        {
+            int index = length / 2;
+            return (merged[index - 1] + merged[index]) / 2;
+        }
+        else
+        {
+            int index = (length - 1) / 2;
+            return merged[index];
+        }
+
+ 	-------------------------------
+
+
+        if(merged.length%2!=0){
+            return merged[merged.length/2];
+        }
+        return (double) (merged[merged.length/2]+merged[(merged.length/2)-1])/2;
+
+	--------------------------------
+
+	return merged.length%2!=0 ? return merged[merged.length/2] : (double) (merged[merged.length/2]+merged[(merged.length/2)-1])/2;
