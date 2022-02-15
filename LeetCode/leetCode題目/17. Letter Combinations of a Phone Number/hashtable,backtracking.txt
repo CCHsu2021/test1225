@@ -1,0 +1,57 @@
+public class Solution
+    {
+        public IList<string> LetterCombinations(string digits)
+        {
+            if (digits == null || digits.Length == 0)
+                return new List<string>();
+
+            Hashtable hash = new Hashtable();
+            //不規則陣列(Jagged Array)，可以想像成陣列中的陣列。
+            char[][] graph = new char[digits.Length][];
+            string temp = string.Empty;
+            List<string> result = new List<string>();
+
+            hash.Add('2', "abc");
+            hash.Add('3', "def");
+            hash.Add('4', "ghi");
+            hash.Add('5', "jkl");
+            hash.Add('6', "mno");
+            hash.Add('7', "pqrs");
+            hash.Add('8', "tuv");
+            hash.Add('9', "wxyz");
+            
+            //此處將每一個hash裡的key所代表的value放入字串，並決定graph陣列內每一個陣列的長度並將字串的值塞到每一個陣列內。
+            for (int i = 0; i < digits.Length; i++)
+            {
+                temp = (string)hash[digits[i]];
+
+                graph[i] = new char[temp.Length];
+
+                for (int j = 0; j < temp.Length; j++)
+                    graph[i][j] = temp[j];
+            }
+
+            DFS(graph, 0, string.Empty, result);
+
+            return result;
+        }
+
+        //以下方法使用了backtracking演算法，深度優先搜尋法(DFS)。
+        public void DFS(char[][] graph, int currentLayer, string previousCombination, List<string> result)
+        {
+            string currentCombination = string.Empty;
+
+            if (graph.Length - 1 < currentLayer)
+            {
+                result.Add(previousCombination);
+                return;
+            }
+
+            foreach (var item in graph[currentLayer])
+            {
+                currentCombination = previousCombination;
+
+                DFS(graph, currentLayer + 1, currentCombination += item, result);
+            }
+        }
+    }
