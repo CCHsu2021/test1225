@@ -1,0 +1,18 @@
+public class Solution {
+    public int Reverse(int x)
+    {
+     int target = 0;
+     while(x != 0)
+     {
+      int z = x % 10;
+      x/=10;
+      if(target > int.MaxValue /10)
+          return 0;
+      if(target < int.MinValue/10)
+          return 0;
+      target = target*10 + z;
+     }
+     return target;
+        
+    }
+}
