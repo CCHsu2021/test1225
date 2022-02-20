@@ -1,0 +1,41 @@
+public class Solution {
+    public bool IsValid(string s) {
+        Stack<char>stack=new Stack<char>();
+        if(s.Length == 1 || s.Length%2 == 1)
+            return false;
+        
+        foreach(char tempChar in s)
+        {
+            if(tempChar =='(' || tempChar == '[' || tempChar =='{')
+            {
+                stack.Push(tempChar);
+            }
+            try
+            {
+                if(tempChar ==')' || tempChar ==']' || tempChar =='}')
+                {
+                    char preChar = stack.Pop();
+                    if (preChar == '(' && tempChar != ')')
+                    {
+                        return false;
+                    }
+                    if (preChar == '[' && tempChar != ']')
+                    {
+                        return false;
+                    }
+                    if (preChar == '{' && tempChar != '}')
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch
+            {
+             return false;   
+            }
+        }
+        if (stack.Count == 0)
+            return true;
+        else return false;
+    }
+}
