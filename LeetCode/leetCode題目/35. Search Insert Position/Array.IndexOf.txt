@@ -1,0 +1,13 @@
+public class Solution {
+    public int SearchInsert(int[] nums, int target) {
+        int at= Array.IndexOf(nums,target);
+        if(at==-1){
+           int[] merged = new int[nums.Length+1];
+           nums.CopyTo(merged,0);    
+           merged[nums.Length]=target;
+           Array.Sort(merged);  
+           return Array.IndexOf(merged,target);
+        }
+        return at;
+    }
+}

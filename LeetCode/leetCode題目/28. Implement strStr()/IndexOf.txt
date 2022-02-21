@@ -1,0 +1,11 @@
+public class Solution {
+    public int StrStr(string haystack, string needle) {
+        if(needle == ""){
+            return 0;
+        }
+        else if(haystack== ""){
+            return -1;
+        }
+        return haystack.IndexOf(needle);
+    }
+}
